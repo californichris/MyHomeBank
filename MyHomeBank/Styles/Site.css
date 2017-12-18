@@ -1,0 +1,557 @@
+﻿/* DEFAULTS
+----------------------------------------------------------*/
+
+body   
+{
+    background: #ffffff;
+    font-size: 12px;
+    font-family:  "Lucida Grande", "Helvetica Neue", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: #696969;
+}
+
+a:link, a:visited
+{
+    color: #034af3;
+}
+
+a:hover
+{
+    color: #1d60ff;
+    text-decoration: none;
+}
+
+a:active
+{
+    color: #034af3;
+}
+
+p
+{
+    margin-bottom: 10px;
+    line-height: 1.6em;
+}
+
+
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6
+{
+    font-size: 1.5em;
+    color: #666666;
+    font-variant: small-caps;
+    text-transform: none;
+    font-weight: 200;
+    margin-bottom: 0px;
+}
+
+h1
+{
+    font-size: 1.6em;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+h2
+{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+h3
+{
+    font-size: 1.2em;
+}
+
+h4
+{
+    font-size: 1.1em;
+}
+
+h5, h6
+{
+    font-size: 1em;
+}
+
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+    margin-top: 0px;
+}
+
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+.page
+{
+    width: 1098px; /* 960px */
+    background-color: #fff;
+    margin: 1px auto 0px auto;
+    padding-top:1px;
+}
+
+.header
+{
+    position: relative;
+    margin: 1px;
+    padding: 0px;
+}
+
+.main
+{
+    padding-left: 3px;
+    padding-right: 3px;
+    margin: 12px 0px 0px 0px;
+    min-height: 540px;
+}
+
+.footer
+{
+    color: #4e5766;
+    padding: 8px 0px 0px 0px;
+    margin: 0px auto;
+    text-align: center;
+    line-height: normal;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+
+.clear
+{
+    clear: both;
+}
+
+.title
+{
+    display: block;
+    float: left;
+    text-align: left;
+    width: auto;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.loginDisplay
+{
+    font-size: 1.1em;
+    display: block;
+    text-align: right;
+    padding: 5px;
+    
+    /*color: White;*/
+}
+
+.loginDisplay a:link
+{
+    /*color: White;*/
+}
+
+.loginDisplay a:visited
+{
+    /*color: White;*/
+}
+
+.loginDisplay a:hover
+{
+    /*color: White;*/
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+/***********************************************************************************/
+
+div.links 
+{
+    width:150px;
+    height:150px;
+}
+
+.ui-button-text {font-size : 11px;}
+
+.modal-form {padding:0!important;}
+.modal-form input { display:block; }
+.modal-form input.text, .modal-form textarea.text { margin-bottom:12px; width:95%; padding: 5px; resize: none;}
+.modal-form input.hasDatepicker {width:84%; display:inline;}
+.modal-form button.ui-datepicker-trigger {height:26px; margin-left: 0.2em;}
+.modal-form fieldset { padding:0; border:0; margin-top:10px; margin-left: 5px;}
+.modal-form select { display:block; margin-bottom:12px; width:98%; padding: .4em;}
+.modal-form input[type=checkbox] {height: 28px; margin-bottom: 9px;}
+.modal-form .custom-combobox-input { margin-bottom: 12px; margin-top: 0px; }
+.modal-form .ui-selectmenu-button { display:block; margin-bottom: 9.5px; margin-top: 0px; }
+.modal-form .ui-multiselect {margin-bottom: 12px;}
+.modal-form table.table-style td.custom-combobox-input-td { padding-left:0px;}
+
+.select-menu-overflow {
+      max-height: 200px;      
+}
+
+/* --------- Custom Combobox ---------*/
+.custom-combobox 
+{
+    width: 100%;
+}
+
+.custom-combobox-toggle {
+	margin-right: 0px!important;
+	height: 26px;
+	margin-top: 2px;
+		
+    height: 25.5px\9; /*It will apply to all ie from 8 and below */
+}
+ 
+.custom-combobox-input {
+	margin: 0;
+	padding: 5px;
+	background: #FFFFFF!important;
+	width: 99%;
+	/*margin-bottom: 12px;*/
+	margin-top: 2px;
+}
+
+.ui-selectmenu-text 
+{
+ height:18px;
+}
+
+.custom-combobox-button-td 
+{
+    width: 31px;
+    vertical-align: top;
+}
+ 
+.ui-autocomplete {
+	z-index:10000!important;
+}
+
+.ui-autocomplete {
+	max-height: 200px;
+	overflow-y: auto;
+	/* prevent horizontal scrollbar */
+	overflow-x: hidden;
+}
+
+
+.modal-form fieldset.columns-1 .custom-combobox 
+{
+   width: 98%; 
+   width: 97%\9; /*It will apply to all ie from 8 and below */
+}  
+
+.modal-form fieldset.columns-1 .ui-selectmenu-button 
+{
+   width: 96.5%!important; 
+   width: 95%\9!important; /*It will apply to all ie from 8 and below */
+} 
+
+.modal-form fieldset.columns-1 .hasDatepicker
+{
+    width: 89%; 
+    width: 89%\9; /*It will apply to all ie from 8 and below */
+}
+
+.modal-form fieldset.columns-2 .custom-combobox 
+{
+   width: 98%; 
+   width: 97%\9; /*It will apply to all ie from 8 and below */
+}  
+
+.modal-form fieldset.columns-2 .ui-selectmenu-button 
+{
+   width: 98%!important; 
+   width: 98.5%\9!important; /*It will apply to all ie from 8 and below */
+} 
+
+.modal-form fieldset.columns-3 .ui-selectmenu-button 
+{
+   width: 98%!important; 
+   width: 98.5%\9!important; /*It will apply to all ie from 8 and below */
+}
+
+.modal-form fieldset.columns-2 .hasDatepicker
+{
+    width: 84%; 
+    width: 84%\9; /*It will apply to all ie from 8 and below */
+}
+
+.modal-form .custom-combobox-toggle 
+{
+    margin-top: 0px;
+}
+
+.modal-form table.table-style  
+{
+    margin-top: 10px;
+}
+
+.modal-form table.table-style td 
+{
+    padding-left: 5px;
+}
+
+
+.modal-form table.table-style .ui-selectmenu-button 
+{
+    width: 98%!important; 
+    width: 98.5%\9!important; /*It will apply to all ie from 8 and below */
+    height: 24px;
+}
+
+.modal-form table.table-style td[colspan="2"] input.text, .modal-form table.table-style td[colspan="2"] textarea {
+    width: 97.5%!important;
+}
+
+.modal-form tr.columns-3 input.hasDatepicker {width:80%;}
+.modal-form tr.columns-4 input.hasDatepicker {width:81%;}
+
+/* IE 6 doesn't support max-height
+ * we use height instead, but this forces the menu to always be this tall
+ */
+* html .ui-autocomplete {
+	height: 200px;
+}
+
+/* --------- Custom Combobox ---------*/
+
+/* Carousel  
+----------------------------------------------------------*/
+#my-carousel ul.carousel {
+	position:absolute; /* required */
+	overflow:hidden; /* required */
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+#my-carousel ul.carousel li.carousel {
+	float:left; /* required */
+	width:1077px; /* required */
+	min-height:530px;
+	margin: 0px 10px 0 0;
+}
+
+#my-carousel .mask {
+	position:relative; /* required */
+	overflow:hidden; /* required */
+	width:1077px /* required */
+}
+
+#my-carousel .pagination-links {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+#my-carousel .pagination-links li {
+	display:inline;
+}
+
+#my-carousel .pagination-links li.current {
+	background:grey;
+}
+
+#my-carousel .disabled {
+	color:grey;
+}
+
+.ui-button .ui-icon.ui-icon-field {margin-top: -6px; opacity:0.5; background-image: url(../Images/text.gif) !important; }
+.ui-button.ui-state-hover .ui-icon.ui-icon-field {margin-top: -6px; opacity:0.5; background-image: url(../Images/text.gif) !important; }
+
+.ui-button .ui-icon.ui-icon-db {margin-top: -8px; opacity:0.5; background-image: url(../Images/database.png) !important; }
+.ui-button.ui-state-hover .ui-icon.ui-icon-db {margin-top: -8px; opacity:0.5; background-image: url(../Images/database.png) !important; }
+
+.ui-button .ui-icon.ui-icon-csv {margin-top: -8px; opacity:1; background-image: url(../Images/csv2.png) !important; }
+.ui-button.ui-state-hover .ui-icon.ui-icon-csv {margin-top: -8px; opacity:1; background-image: url(../Images/csv2.png) !important; }
+
+
+.ui-state-success 
+{	
+	background: #dff0d8;
+    border: 1px solid #bee1af;
+	color: #696969;
+}
+
+
+#divBingMap 
+{
+    position: relative;
+    width: 100%;
+    height: 500px;    
+}
+
+input.readonly 
+{
+    border:0px;
+}
+
+.ui-state-error, .ui-widget-content .ui-state-error, .ui-widget-header .ui-state-error {
+    background: #f2f5f7 url(cupertino/images/ui-bg_highlight-hard_100_f2f5f7_1x100.png) 50% top repeat-x !important;
+    color: #362b36 !important;    
+}
+
+.validateTips 
+{
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-left: 5px;
+    font-weight: normal;
+}
+
+.ui-new 
+{
+    background-color: #DFF0D8!important;
+}
+
+.ui-success {
+	color: #ffffff!important;
+	background-color: #57a957!important;
+	background-repeat: repeat-x!important;
+	opacity: .85;
+    background-image: linear-gradient(top, #62c462, #57a957)!important;
+/*text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);	*/
+	border-left-color: #57a957 !important;
+    border-right-color: #57a957 !important;
+    border-top-color: #57a957 !important;
+    border-bottom-color: #3d773d !important;
+}
+
+.ui-success-hover {
+    color: #ffffff!important;
+	background-color: #51a351!important;
+	background-repeat: repeat-x;
+	background-image: linear-gradient(top, #5BB35B, #57A957)!important;
+	/*text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);	*/
+	border-left-color: #57a957 !important;
+    border-right-color: #57a957 !important;
+    border-top-color: #57a957 !important;
+    border-bottom-color: #3d773d !important;
+}
+
+.ui-warning {
+	color: #ffffff!important;
+	background-color: #faa732!important;
+	background-repeat: repeat-x!important;
+	opacity: .85;
+    background-image: linear-gradient(top, #fbb450, #f89406)!important;
+/*text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);	*/
+	border-left-color: #f89406 !important;
+    border-right-color: #f89406 !important;
+    border-top-color: #f89406 !important;
+    border-bottom-color: #ad6704 !important;
+}
+
+.ui-warning-hover {
+	color: #ffffff!important;
+	background-color: #faa732!important;
+	background-repeat: repeat-x!important;
+	background-image: linear-gradient(top, #f9a022, #f89406)!important;
+	/*text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);	*/
+	border-left-color: #f89406 !important;
+    border-right-color: #f89406 !important;
+    border-top-color: #f89406 !important;
+    border-bottom-color: #ad6704 !important;
+}
+
+.ui-danger {
+	color: #ffffff!important;
+	background-color: #da4f49!important;
+	background-repeat: repeat-x!important;
+	opacity: .85;
+    background-image: linear-gradient(top, #ee5f5b, #bd362f)!important;
+/*text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25)!important;*/
+	border-left-color: #bd362f !important;
+    border-right-color: #bd362f !important;
+    border-top-color: #bd362f !important;
+    border-bottom-color: #802420 !important;
+}
+
+.ui-danger-hover {
+	color: #ffffff!important;
+	background-color: #da4f49!important;
+	background-repeat: repeat-x!important;
+	background-image: linear-gradient(top, #d44943, #bd362f)!important;
+	border-left-color: #bd362f !important;
+    border-right-color: #bd362f !important;
+    border-top-color: #bd362f !important;
+    border-bottom-color: #802420 !important;
+}
+
+.filter-form input { display:block; border: 1px solid #ddd;}
+.filter-form input { width:93%; padding: 5px; }
+.filter-form input.text, .filter-form textarea.text { width:93%; padding: 5px; }
+.filter-form input.hasDatepicker {width:80%; display:inline;}
+.filter-form button.ui-datepicker-trigger {height:26px; margin-left: 2px;}
+.filter-form table.custom-combobox {width:99%;}
+.filter-form .custom-combobox-input { width:98%; padding: 5px; margin-top: 2px; }
+.filter-form .custom-combobox-toggle { height:26px; }
+.filter-form .ui-selectmenu-button { display:block; margin-top: 0px; width:97%!important;}
+
+.filter-form tr.columns-1 input { width:98%; }
+.filter-form tr.columns-1 input.hasDatepicker {width:93.5%; display:inline;}
+.filter-form tr.columns-1 table.custom-combobox .custom-combobox-input {width:99%;}
+.filter-form tr.columns-1 .ui-selectmenu-button { width:99%!important;}
+.filter-form tr.columns-2 input { width:95.5%; }
+.filter-form tr.columns-2 input.hasDatepicker {width:86.5%; display:inline;}
+.filter-form tr.columns-2 table.custom-combobox .custom-combobox-input {width:98%;}
+.filter-form tr.columns-2 .ui-selectmenu-button { width:98%!important;}
+
+.ui-selectmenu-menu {z-index:10000!important;}
+
+ul.export-menu { 
+    position: absolute; 
+    width: 125px; 
+    padding-bottom: 2px;
+    padding-left: 2px;
+    padding-right: 8px;
+    padding-top: 2px;
+    margin-top: 5px;
+}        
+
+ul.export-menu li a {
+    text-decoration:none;
+    display: block;
+    overflow: hidden;
+    font-weight: normal;
+    padding-top: 2px;
+    padding-right: 0.4em;
+    padding-bottom: 2px;
+    padding-left: 0.4em;
+    margin-right: 12px;
+    color: rgb(39, 121, 170);
+}
+
+div.modal-form div.dataTables_filter input[type=search] {
+    display: inherit;
+    margin-bottom: 0px;
+    padding: 0px;
+    width: inherit;
+}
+
+div.modal-form table.dataTable {
+    width:100%!important;
+}
+
+table.dataTable tbody tr.ui-state-active {
+    font-weight: normal!important;
+}
+
+table.dataTable tbody tr.ui-state-active:hover {
+    font-weight: normal!important;
+}
+
+.ui-autocomplete-loading {
+    background: white url("../Images/ui-anim_basic_16x16.gif") right center no-repeat!important;
+}
+
+div.nowrap-col {
+    white-space: nowrap; 
+    overflow:hidden; 
+    text-overflow : ellipsis;
+}

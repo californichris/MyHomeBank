@@ -1,0 +1,71 @@
+#menu-container .ui-menu { 
+    overflow: hidden;
+    border-bottom: 3px solid #AED0EA;
+    margin-top: 5px;
+    margin: 5px;
+    z-index:1000;    
+}
+
+#menu-container .ui-menu .ui-menu-item 
+{
+    border: 1px solid rgba(255, 255, 255, 0);
+    position: static;
+}
+
+#menu-container .ui-menu .ui-state-focus 
+{
+    border: 1px solid #74b2e2;
+}
+
+#menu-container .ui-menu .ui-state-active
+{
+    border: 1px solid #74b2e2;
+}
+
+#menu-container .ui-menu > li { 
+    float: left;
+    display: block;
+    width: auto !important;
+}
+
+#menu-container .ui-menu ul li {
+    display:block;
+    float:none;
+}
+
+#menu-container .ui-menu ul {
+    padding-right: 8px;
+}
+
+#menu-container .ui-menu > li {
+    margin: 5px 5px !important;
+    padding: 0 0 !important;
+}
+
+#menu-container .ui-menu > li > a { 
+    display: block;
+    overflow: hidden;    
+    line-height: 1.5;
+    font-weight: normal;
+    padding-top: 2px;
+    padding-right: 0.4em;
+    padding-bottom: 2px;
+    padding-left: 0.4em;    
+    margin-right: 12px;
+    color: rgb(39, 121, 170);
+}
+
+#menu-container #menu ul.ui-menu {
+    padding-bottom: 2px;
+    padding-left: 2px;
+    padding-right: 8px;
+    padding-top: 2px;
+}
+
+#menu-container span.ui-menu-icon 
+{
+    float: right; 
+    position: static; 
+    margin-top: 3px;
+}
+

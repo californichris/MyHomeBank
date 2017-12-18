@@ -1,0 +1,90 @@
+﻿#tabsection li .ui-icon-close, #tabsection li .ui-icon-pencil { float: left; margin: 0.4em 0.2em 0 0; cursor: pointer; }
+#filter-fields li, #grid-columns li {margin: 0 5px 5px 5px; padding: 0px 5px 0px 5px; height: 28px;}
+#filter-fields, #grid-columns { list-style-type: none; margin: 0; padding: 0 0 2.5em; float: left; }
+
+ul.sortable-fields { list-style-type: none; margin: 0; padding: 0; width: 100%; }
+ul.sortable-fields li { margin: 2px; padding: 0px; float: left; height: 28px; }
+
+div.dialogtab { padding:10px!important;}
+
+div.field_drag_handle {cursor:move; opacity:0.7; position: relative;top: -22px; left:50%; width:20px; height: 20px;} 
+               
+div.nowrap {
+    overflow: hidden;text-overflow: ellipsis;
+    float:left;
+    display:inline;
+} 
+
+div.tabcontainer table td {
+    padding:0px;
+}
+        
+div.tabcontainer div.scroller {
+    overflow: hidden;
+    width:737px;
+}
+
+div.tabcontainer div.scroller ul {
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    border-right: 0px;
+    width: 1476px;
+    height:32px;
+}
+
+div.tabcontainer div.scroller ul {
+            
+}
+
+div.tabcontainer div.tabscroll {
+    height:35px;
+}
+
+div.tabcontainer #tabscrollsection {
+    border-left:0px;
+    border-right:0px;
+}
+        
+div.tabcontainer div.searchContainer  {
+    border-left:0px;
+    border-bottom-right-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+div.tabcontainer div.searchContainer input.text {
+    float: right;
+    margin: 5px;
+    padding:2px;
+}
+
+div.tabcontainer button.scrollbtn {
+    margin-top:5px;
+    width:20px;
+    float:right;
+    margin-left:0px;
+    margin-right:0px;
+    height:30px;              
+}
+
+div.tabcontainer button.left {
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;         
+}
+
+div.tabcontainer button.right {
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    border-left:0px;                      
+}
+        
+table.custom-combobox {
+    width: 96.5%!important;
+}
+           
+input.custom-combobox-input {
+    width: 99.5%;
+} 
+        
+#ConnName-button {
+    width: 96%!important;
+} 

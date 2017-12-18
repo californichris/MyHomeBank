@@ -1,0 +1,107 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="MyHomeBank.SiteMaster" %>
+<%@ Import Namespace="System.Web.Optimization" %>
+<!DOCTYPE html>
+<html  lang="en">
+<head runat="server">
+    <title>My Home Bank</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />    
+    <link href="<%= Page.ResolveUrl("~/Images/favicon.ico") %>" type="image/x-icon" rel="shortcut icon"/>
+    <%: Styles.Render("~/Styles/site_master_css", "~/Styles/overcast/jquery_css") %>
+    <%: Scripts.Render("~/Scripts/site_master_js") %>    
+    <script type="text/javascript">
+        var AJAX_CONTROLER_URL = '<%= ResolveUrl("~/AjaxController.ashx") %>';
+        var AJAX = AJAX_CONTROLER_URL;
+        var CURRENT_PATH = "<%= Request.Path.Substring(0, Request.Path.LastIndexOf('/')) %>";
+        var APP_PATH = "<%= Request.ApplicationPath %>";
+        var APP_HOST = "<%= Request.Url.Host %>";
+        var DEFAULT_ACCOUNT = 2;
+
+        $(document).ready(function () {
+            if (APP_HOST.toLowerCase() == 'localhost') {
+                $('#environment').text('Development Environment');
+            } else if (APP_HOST.toLowerCase() == 'dtapp1') {
+                $('#environment').text('Test Environment');
+            }
+
+            $('#menu').addClass('ui-corner-all').menu({ position: { at: 'left bottom+2' }, my: 'left bottom' }, { icons: { submenu: 'ui-icon-triangle-1-s' } });
+            $('#menu .ui-menu-item').addClass('ui-corner-all');
+            $('#menu-container #menu ul.ui-menu').addClass('ui-corner-all');
+            $('#menu a').css('text-decoration', 'none');
+        });
+    </script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server"></form>
+    <div class="page ui-corner-all">
+        <div class="ui-state-default ui-corner-all header">
+            <table cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                    <td>
+                        <div class="title bold">My Home Bank</div>
+                    </td>
+                    <td>
+                        <table cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                                <td>
+                                    <div class="loginDisplay">
+                                        <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                                            <AnonymousTemplate></AnonymousTemplate>
+                                            <LoggedInTemplate>
+                                                Welcome <span class="bold">
+                                                    <asp:LoginName ID="HeadLoginName" runat="server" />
+                                                </span>
+                                            </LoggedInTemplate>
+                                        </asp:LoginView>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right" style="padding-right: 6px;">
+                                    <span id="environment"></span>
+                                </td>
+
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div id="menu-container">
+                        <ul id="menu">
+                            <li><a href="<%= Request.ApplicationPath %>">Home</a></li>
+                            <li><a href="<%= Request.ApplicationPath %>/Transactions.aspx">Transactions</a></li>
+                            <li><a href="#">Catalogs</a>
+                                <ul>
+                                    <li><a href="<%= Request.ApplicationPath %>/Catalogs/Accounts.aspx">Accounts</a></li>
+                                    <li><a href="<%= Request.ApplicationPath %>/Catalogs/Categories.aspx">Categories</a></li>
+                                    <li><a href="<%= Request.ApplicationPath %>/Catalogs/Payees.aspx">Payees</a></li>
+                                    <li><a href="<%= Request.ApplicationPath %>/Catalogs/Payments.aspx">Payments</a></li>
+                                    <li><a href="<%= Request.ApplicationPath %>/Catalogs/Types.aspx">Types</a></li>
+                                </ul>
+                            </li>                             
+                            <li><a href="#">Admin</a>
+                                <ul>
+                                    <li><a href="<%= Request.ApplicationPath %>/Admin/PageConfig.aspx">Page Config</a></li>
+                                    <li><a href="<%= Request.ApplicationPath %>/Admin/ListItemsConfig.aspx">Page List Items</a></li>
+                                    <li><a href="<%= Request.ApplicationPath %>/Admin/QueryHelper.aspx">Query Helper</a></li>
+                                    <li><a href="<%= Request.ApplicationPath %>/Admin/RefreshCache.aspx">Refresh Cache</a></li>
+                                </ul>
+                            </li>      
+                        </ul>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+    </div>
+</body>
+</html>
