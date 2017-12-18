@@ -48,9 +48,9 @@
     <Reference Include="Antlr3.Runtime">
       <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="EPEFramework, Version=3.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="EPEFramework, Version=3.7.7.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\EPEFramework.3.7.0\lib\EPEFramework.dll</HintPath>
+      <HintPath>..\packages\EPEFramework.3.7.7\lib\EPEFramework.dll</HintPath>
     </Reference>
     <Reference Include="itextsharp, Version=5.5.9.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -95,6 +95,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\CurrentUsers.aspx" />
     <Content Include="Admin\ListItemsConfig.aspx" />
     <Content Include="Admin\PageConfig.aspx" />
     <Content Include="Admin\Preview.aspx" />
@@ -125,6 +126,7 @@
     <Content Include="Scripts\jquery.carousel.js" />
     <Content Include="Scripts\jquery.dataTables.js" />
     <Content Include="Scripts\jquery.fileDownload.js" />
+    <Content Include="Scripts\jquery.hotkeys.js" />
     <Content Include="Scripts\jquery.js" />
     <Content Include="Scripts\jquery.json-2.4.js" />
     <Content Include="Scripts\jquery.maskMoney.js" />
@@ -186,6 +188,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\CurrentUsers.aspx.cs">
+      <DependentUpon>CurrentUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CurrentUsers.aspx.designer.cs">
+      <DependentUpon>CurrentUsers.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\ListItemsConfig.aspx.cs">
       <DependentUpon>ListItemsConfig.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -272,6 +281,9 @@
     <Compile Include="Handlers\AjaxController.ashx.cs">
       <DependentUpon>AjaxController.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Handlers\AjaxDownloadHandler.ashx.cs">
+      <DependentUpon>AjaxDownloadHandler.ashx</DependentUpon>
+    </Compile>
     <Compile Include="InvalidAccess.aspx.cs">
       <DependentUpon>InvalidAccess.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -307,6 +319,7 @@
     <Folder Include="Dao\Sql\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Handlers\AjaxDownloadHandler.ashx" />
     <Content Include="Handlers\AjaxController.ashx" />
     <None Include="Properties\PublishProfiles\MyHomeBank.pubxml" />
   </ItemGroup>

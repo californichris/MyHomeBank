@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="RedFlags.Global" Language="C#" %>
+<%@ Application Codebehind="Global.asax.cs" Inherits="MyHomeBank.Global" Language="C#" %>

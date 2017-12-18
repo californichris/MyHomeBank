@@ -519,10 +519,10 @@ ul.export-menu li a {
     display: block;
     overflow: hidden;
     font-weight: normal;
-    padding-top: 2px;
-    padding-right: 0.4em;
-    padding-bottom: 2px;
-    padding-left: 0.4em;
+    padding-top: 3px;
+    padding-right: 2px;
+    padding-bottom: 3px;
+    padding-left: 2px;
     margin-right: 12px;
     color: rgb(39, 121, 170);
 }
@@ -554,4 +554,9 @@ div.nowrap-col {
     white-space: nowrap; 
     overflow:hidden; 
     text-overflow : ellipsis;
+}
+
+.dataTables_processing {
+    z-index:100;
+    top: 100px!important;
 }

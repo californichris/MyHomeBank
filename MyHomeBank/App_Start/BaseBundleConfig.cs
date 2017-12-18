@@ -45,6 +45,7 @@ namespace EPE.Common
                 .Include(ScriptsPath + "jquery.multiselect.js")                
                 .Include(ScriptsPath + "jquery.multiselect.filter.js")
                 .Include(ScriptsPath + "jquery-ui-timepicker-addon.js")
+                .Include(ScriptsPath + "jquery.hotkeys.js")
                 .Include(ScriptsPath + "jquery.maskMoney.js");
             bundles.Add(multiSelectJSBundle);
 

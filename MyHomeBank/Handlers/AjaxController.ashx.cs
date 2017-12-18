@@ -11,6 +11,7 @@ using EPE.Common.Utils;
 using iTextSharp.text;
 using iTextSharp.text.html.simpleparser;
 using iTextSharp.text.pdf;
+using Microsoft.Practices.EnterpriseLibrary.Logging;
 
 namespace EPE.Common.handler
 {
@@ -28,21 +29,24 @@ namespace EPE.Common.handler
         /// <param name="context">the request HTTPContext</param>
         public void ProcessRequest(HttpContext context)
         {
-            LoggerHelper.Info("Start");
-            string response = HandleAjaxRequest(context.Request);
+            using (new TraceManager(Logger.Writer).StartTrace("Ajax"))
+            {
+                LoggerHelper.Info("Start");
+                string response = HandleAjaxRequest(context.Request);
             
-            string csv = context.Request.Params["csv"];
-            if (!string.IsNullOrEmpty(csv) && bool.Parse(csv))
-            {
-                HandleExport(context, response);
-            }                        
-            else
-            {
-                context.Response.ContentType = "application/json";
-                context.Response.Write(response);
+                string csv = context.Request.Params["csv"];
+                if (!string.IsNullOrEmpty(csv) && bool.Parse(csv))
+                {
+                    HandleExport(context, response);
+                }                        
+                else
+                {
+                    context.Response.ContentType = "application/json";
+                    context.Response.Write(response);
+                }
+            
+                LoggerHelper.Info("End");
             }
-            
-            LoggerHelper.Info("End");
         }
 
         public virtual void HandleExport(HttpContext context, string response)
