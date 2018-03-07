@@ -1538,7 +1538,15 @@ $.widget("epe.Catalog", {
             text: 'Cancel',
             tabindex: 990,
             click: function () {
+                if (null != options.beforeDialogCancelCallBack && typeof (options.beforeDialogCancelCallBack) == 'function') {
+                    options.beforeDialogCancelCallBack(options);
+                }
+
                 $(this).dialog('close');
+
+                if (null != options.afterDialogCancelCallBack && typeof (options.afterDialogCancelCallBack) == 'function') {
+                    options.afterDialogCancelCallBack(options);
+                }
             }
         });
 
@@ -1738,7 +1746,7 @@ $.widget("epe.Catalog", {
                 } else {
                     that._dialog.dialog('close');
                     $(tableSel + '_wrapper button.disable').button('disable');
-                    $(tableSel).DataTable().ajax.reload();
+                    $(tableSel).DataTable().ajax.reload(null, false);
                 }
             } else {
                 showError($(options.dialogSelector + ' p.validateTips'), json.ErrorMsg);
@@ -1816,16 +1824,15 @@ $.widget("epe.Catalog", {
         }
     },
 
-    reloadTable: function (url, callback) {
-        if (typeof url != 'undefined' && url != null && url != '' && callback != null) {
-            return this.oTable.ajax.url(url).load(callback);
+    reloadTable: function (url, callback, resetPaging) {
+        var _resetPaging = resetPaging || false;
+        var _callback = callback || null;
+
+        if (typeof url != 'undefined' && url) {
+            return this.oTable.ajax.url(url).load(_callback, _resetPaging);
         }
 
-        if (typeof url != 'undefined' && url != null && url != '') {
-            return this.oTable.ajax.url(url).load();
-        }
-
-        return this.oTable.ajax.reload();
+        return this.oTable.ajax.reload(_callback, _resetPaging);
     },
 
     clearTable: function () {

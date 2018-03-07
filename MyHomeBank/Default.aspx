@@ -168,7 +168,8 @@
 	        summaryAccount.selectmenu({ change: function () { realodMonthlySummary(); } });
 
 	        var summaryYear = $('<select id="summaryYear" name="summaryYear" class="ui-corner-all" style="width:100px;"></select>');
-	        var year = parseInt(Date.today().toString('yyyy'));
+	        var year = parseInt(Date.today().addYears(1).toString('yyyy'));
+	        log(year);
 	        var startYear = 2013;
 
 	        for (var i = startYear; i <= year; i++) {
